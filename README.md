@@ -1,0 +1,2 @@
+# inputRange
+InputRange.style
