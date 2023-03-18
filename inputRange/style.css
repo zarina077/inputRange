@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    display:grid; 
+  height: 100%;
+ text-align: center;
+  place-items: center;
+  background-color: pink;
+}
+.range{
+    height: 80px;
+    width: 380px;
+background-color: white;
+border-radius: 10px;
+padding: 0 65px 0 45px;
+}
+.range .field{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+ .value{
+    position: absolute;
+    font-size: 18px;
+color: rgb(228, 82, 106);
+}
+.value.left{
+    left: -22px;
+}
+.value.right{
+    right:-43px;
+}
+.range .sliderValue{
+    position: relative;
+    width: 100%; 
+}
+.range .sliderValue span{
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    color: white;
+    font-weight: 400;
+    top: -40px;
+    transform: translateX(-50%) scale(0);
+    line-height: 55px;
+    transform-origin: bottom;
+    transition: transform 0.3 ease-in-out;
+    z-index: 2;
+
+}
+.range .sliderValue span.show{
+    transform: translateX(-50%) scale(1);
+
+}
+.range .sliderValue span::after{
+    position: absolute;
+    content: " ";
+    height: 45px;
+    width: 45px;
+    background-color: rgb(238, 103, 125);
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+    left: 50%;
+    border: #fff 3px solid;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+}
+.range .field input{
+    -webkit-appearance: none;
+height: 3px;
+width: 100%;
+background-color: #ddd;
+border-radius: 5px;
+outline: none;
+border: none;
+}
+.range .field input::-moz-range-progress{
+    background-color: rgb(242, 127, 146);
+}
+.range .field input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(238, 103, 125);
+border: 1px solid rgb(238, 103, 125);
+cursor: pointer;
+}
